@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Courses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <?php include 'header.html'; ?>
+
+    <!-- Courses Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">Available Courses</h2>
+                <div class="mt-4 md:mt-0">
+                    <label for="filter" class="mr-2 text-gray-700">Filter by:</label>
+                    <select id="filter" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="all">All Courses</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="beginner">Beginner Level</option>
+                        <option value="advanced">Advanced Level</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/4144228/pexels-photo-4144228.jpeg')"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Web Development Bootcamp</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Beginner</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Master HTML, CSS, JavaScript and modern frameworks in this comprehensive course.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-indigo-600">$99</span>
+                                <span class="text-gray-500 text-sm ml-2">(30 hours)</span>
+                            </div>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/4144229/pexels-photo-4144229.jpeg')"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Data Science Fundamentals</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Intermediate</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Learn Python, Pandas, NumPy and data visualization techniques.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-indigo-600">$129</span>
+                                <span class="text-gray-500 text-sm ml-2">(40 hours)</span>
+                            </div>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional courses would be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <?php include 'footer.html'; ?>
+
+    <script>
+        // Filter functionality would be added here
+        document.getElementById('filter').addEventListener('change', function() {
+            // In a real app, this would filter the courses
+            console.log('Filter changed to:', this.value);
+        });
+    </script>
+</body>
+</html>
